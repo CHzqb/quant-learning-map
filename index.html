@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>量化学习资源导航 · 精选清单</title>
+<style>
+:root{
+  --bg:#f4f6f9; --card:#ffffff; --text:#16191d; --muted:#5c6673;
+  --line:#e4e8ee; --accent:#1f6feb; --accent-soft:#eaf1fe;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);line-height:1.6;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:1140px;margin:0 auto}
+header{background:linear-gradient(180deg,#eef4ff 0%,#f4f6f9 100%);
+  border-bottom:1px solid var(--line);padding:36px 24px 28px}
+h1{margin:0 0 6px;font-size:26px;letter-spacing:-.02em}
+.sub{color:var(--muted);font-size:14px;margin:0 0 20px}
+.paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.path{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.path h3{margin:0 0 6px;font-size:13.5px;color:var(--accent);letter-spacing:.01em}
+.path p{margin:0;font-size:13px;color:var(--muted)}
+.path b{color:var(--text);font-weight:600}
+.toolbar{position:sticky;top:0;z-index:9;background:rgba(244,246,249,.94);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:12px 24px}
+.toolbar .wrap{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+#q{flex:1 1 220px;min-width:180px;padding:9px 12px;border:1px solid var(--line);
+  border-radius:9px;font-size:14px;background:#fff;color:var(--text);outline:none;
+  font-family:inherit}
+#q:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.chip{padding:6px 12px;border:1px solid var(--line);background:#fff;border-radius:999px;
+  font-size:13px;color:var(--muted);cursor:pointer;white-space:nowrap;font-family:inherit}
+.chip:hover{border-color:#c9d4e5}
+.chip.on{background:var(--accent);border-color:var(--accent);color:#fff}
+main{padding:24px}
+section{margin-bottom:30px}
+.sec-h{display:flex;align-items:baseline;gap:10px;margin:0 0 12px}
+.sec-h h2{font-size:16px;margin:0}
+.sec-h span{font-size:12px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px;text-decoration:none;color:inherit;transition:.15s}
+.card:hover{border-color:var(--accent);box-shadow:0 4px 14px rgba(31,111,235,.10);transform:translateY(-1px)}
+.c-top{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:2px}
+.c-name{font-weight:650;font-size:14.5px}
+.c-badge{font-size:11px;padding:2px 7px;border-radius:6px;background:var(--accent-soft);
+  color:var(--accent);white-space:nowrap;font-weight:500}
+.c-badge.cpp{background:#fdeceb;color:#c0392b}
+.c-badge.free{background:#e8f7ee;color:#1a7f4b}
+.c-badge.warn{background:#fef6e7;color:#a16207}
+.c-url{font-size:12px;color:#8a94a3;margin-bottom:6px;word-break:break-all}
+.c-desc{margin:0;font-size:13px;color:var(--muted)}
+.c-tags{margin-top:8px;display:flex;gap:6px;flex-wrap:wrap}
+.c-tags span{font-size:11px;color:#7a8494;background:#f2f4f7;padding:1px 7px;border-radius:5px}
+.warn-box{background:#fef6e7;border:1px solid #f3d9a4;color:#8a5a12;
+  border-radius:10px;padding:10px 14px;font-size:13px;margin:0 0 20px}
+footer{padding:24px;color:#8a94a3;font-size:12px;border-top:1px solid var(--line);margin-top:12px}
+footer p{margin:4px 0}
+.empty{display:none;padding:40px;text-align:center;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>量化学习资源导航</h1>
+    <p class="sub">按「你要做什么」分层，而不是按名气堆列表 · 共 55 个站点与开源项目 · 整理于 2026-09-24</p>
+    <div class="paths">
+      <div class="path">
+        <h3>① 想啃底层 / 高频 / 低延迟</h3>
+        <p><b>QuantLib</b>（C++ 定价库）→ <b>Awesome-QuantDev-Learn</b> 的 C++ 方向目录 → <b>hftbacktest</b> → 平台用 <b>掘金量化</b>（国内唯一明确支持 C++ 的）。</p>
+      </div>
+      <div class="path">
+        <h3>② 想两周跑通第一个策略</h3>
+        <p><b>QuantStart</b> 教程 → <b>AkShare</b> 取数 → <b>backtesting.py</b> 回测。全免费、全本地，不被平台卡脖子。</p>
+      </div>
+      <div class="path">
+        <h3>③ 想做因子 / AI 量化</h3>
+        <p><b>SSRN</b> 读原始论文 → <b>Alpha Architect</b> 看因子实证 → <b>Qlib</b> 跑机器学习工作流。</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="toolbar">
+  <div class="wrap">
+    <input id="q" type="search" placeholder="搜索：C++ / 因子 / 数据 / 回测 …">
+    <button class="chip on" data-cat="all">全部</button>
+    <button class="chip" data-cat="cpp">C++ 与低延迟</button>
+    <button class="chip" data-cat="cn">国内平台</button>
+    <button class="chip" data-cat="data">数据源</button>
+    <button class="chip" data-cat="course">系统课程</button>
+    <button class="chip" data-cat="research">研究博客</button>
+    <button class="chip" data-cat="comm">社区问答</button>
+    <button class="chip" data-cat="lib">开源框架</button>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section data-sec>
+    <div class="sec-h"><h2>C++ 与低延迟（你的主战场）</h2><span>8 项 · 底层实现与市场微观结构</span></div>
+    <div class="grid">
+
+      <a class="card" data-cat="cpp" data-kw="quantlib c++ 开源 衍生品 定价 利率 风控 金融库" href="https://www.quantlib.org/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">QuantLib</span><span class="c-badge cpp">C++</span></div>
+        <div class="c-url">quantlib.org · github.com/lballabio/QuantLib</div>
+        <p class="c-desc">用 C++ 写的开源量化金融库，衍生品定价、利率曲线、风控模型的业界标准实现。想读「真正的量化代码长什么样」，从这里开始——模板元编程、日期/期限结构设计都值得细看。</p>
+        <div class="c-tags"><span>#C++</span><span>#开源</span><span>#定价</span><span>#必读源码</span></div>
+      </a>
+
+      <a class="card" data-cat="cpp" data-kw="awesome quantdev learn 中文 学习路线 c++量化开发方向 面试题 数据 回测 实盘" href="https://github.com/0voice/Awesome-QuantDev-Learn" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">Awesome-QuantDev-Learn</span><span class="c-badge cpp">C++ 路线</span></div>
+        <div class="c-url">github.com/0voice/Awesome-QuantDev-Learn</div>
+        <p class="c-desc">中文量化开发学习路线图，仓库里单独有一个「C++量化开发方向」目录，另有核心技术栈、系统集成运维、进阶话题和国内量化公司面试题。</p>
+        <div class="c-tags"><span>#中文</span><span>#路线图</span><span>#面试</span></div>
+      </a>
+
+      <a class="card" data-cat="cpp" data-kw="deep field 低延迟 高频 hft 执行架构 底层" href="https://www.deepfield.tech" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">Deep Field</span><span class="c-badge cpp">低延迟</span></div>
+        <div class="c-url">deepfield.tech</div>
+        <p class="c-desc">专注低延迟系统与高频交易的技术细节——网络栈、内核旁路、撮合路径。对想搞底层执行架构的人，这类内容比策略教程稀缺得多。</p>
+        <div class="c-tags"><span>#HFT</span><span>#低延迟</span><span>#系统</span></div>
+      </a>
+
+      <a class="card" data-cat="cpp" data-kw="hftbacktest 高频 做市 回测 限价单 队列位置 延迟 l2 l3 tick" href="https://github.com/nkaz001/hftbacktest" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">hftbacktest</span><span class="c-badge">回测</span></div>
+        <div class="c-url">github.com/nkaz001/hftbacktest</div>
+        <p class="c-desc">高频与做市回测框架，显式建模限价单队列位置、延迟与 L2/L3 tick 数据。普通回测框架忽略的东西，这里才是胜负手。</p>
+        <div class="c-tags"><span>#HFT</span><span>#做市</span><span>#微观结构</span></div>
+      </a>
+
+      <a class="card" data-cat="cpp" data-kw="high frequency trading simulator c++17 限价簿 hawkes 市场微观结构 沙盒" href="https://github.com/sohaibelkarmi/High-Frequency-Trading-Simulator" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">HFT Simulator</span><span class="c-badge cpp">C++17</span></div>
+        <div class="c-url">github.com/sohaibelkarmi/High-Frequency-Trading-Simulator</div>
+        <p class="c-desc">C++17 写的限价订单簿 + Hawkes 过程模拟器，用来做市场微观结构研究。代码量可控，适合当作「自己动手写撮合/订单簿」的起点。</p>
+        <div class="c-tags"><span>#C++17</span><span>#订单簿</span><span>#练手项目</span></div>
+      </a>
+
+      <a class="card" data-cat="cpp" data-kw="visualhft 实时 市场微观结构 wpf c# 限价簿 vpin 可视化" href="https://github.com/visualHFT/VisualHFT" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">VisualHFT</span><span class="c-badge">桌面端</span></div>
+        <div class="c-url">github.com/visualHFT/VisualHFT</div>
+        <p class="c-desc">实时市场微观结构分析的桌面应用，限价簿可视化 + VPIN 等微观指标。C#/WPF 实现，可参考其数据流与可视化分层设计。</p>
+        <div class="c-tags"><span>#微观结构</span><span>#可视化</span><span>#C#</span></div>
+      </a>
+
+      <a class="card" data-cat="cpp" data-kw="barter-rs rust 算法交易 生态 高性能 多线程 实盘 回测" href="https://github.com/barter-rs/barter-rs" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">barter-rs</span><span class="c-badge">Rust</span></div>
+        <div class="c-url">github.com/barter-rs/barter-rs</div>
+        <p class="c-desc">Rust 算法交易生态：策略、风控、实盘/纸盘/回测统一抽象，高性能多线程。可作为「C++ 之外，现代系统语言怎么写交易系统」的对照阅读。</p>
+        <div class="c-tags"><span>#Rust</span><span>#架构参考</span><span>#开源</span></div>
+      </a>
+
+      <a class="card" data-cat="cpp" data-kw="掘金量化 myquant digquant c++ python 平台 回测 本地 客户端 云端数据" href="https://www.myquant.cn/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">掘金量化 MyQuant</span><span class="c-badge cpp">支持 C++</span></div>
+        <div class="c-url">myquant.cn</div>
+        <p class="c-desc">国内唯一在官网明确标注「兼容 Python、C++」的量化平台，采用本地客户端 + 云端数据架构，回测免费。对 C++ 方向的人来说，这是国内最对口的平台。</p>
+        <div class="c-tags"><span>#C++</span><span>#国内</span><span>#平台</span></div>
+      </a>
+
+    </div>
+  </section>
+
+  <section data-sec>
+    <div class="sec-h"><h2>国内量化平台</h2><span>9 项 · 云端回测与券商实盘</span></div>
+    <div class="warn-box">
+      <b>时效提醒</b>：据公开报道，聚宽（JoinQuant）自 2026-08-01 起停止支持非中国大陆 IP 的访问与使用（国内访问不受影响）。另有报道指出，老牌平台的「完全免费 + 数据全 + 算力无限」模式已普遍收紧，选平台时先确认当前免费额度。以上为媒体/社区报道口径，具体以各平台官方公告为准。
+    </div>
+    <div class="grid">
+
+      <a class="card" data-cat="cn" data-kw="米筐 ricequant 老牌 平台 文档 api 回测 引擎" href="https://www.ricequant.com/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">米筐 Ricequant</span><span class="c-badge">平台</span></div>
+        <div class="c-url">ricequant.com</div>
+        <p class="c-desc">老牌平台，文档与 API 设计清晰、教程对新手友好，回测引擎速度快。适合作为第一个云端回测环境。</p>
+        <div class="c-tags"><span>#国内</span><span>#回测</span><span>#文档友好</span></div>
+      </a>
+
+      <a class="card" data-cat="cn" data-kw="优矿 uqer datayes 通联 基本面 基本面量化 研究报告 数据库" href="https://uqer.datayes.com/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">优矿</span><span class="c-badge">平台</span></div>
+        <div class="c-url">uqer.datayes.com</div>
+        <p class="c-desc">通联数据旗下，强在机构级金融数据库与研究氛围——宏观、行业、财报等基本面数据扎实，社区里有大量研究报告复现。适合基本面量化方向。</p>
+        <div class="c-tags"><span>#国内</span><span>#基本面</span><span>#数据库</span></div>
+      </a>
+
+      <a class="card" data-cat="cn" data-kw="聚宽 joinquant 平台 策略 社区 限制 非大陆ip" href="https://www.joinquant.com/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">聚宽 JoinQuant</span><span class="c-badge warn">访问有变</span></div>
+        <div class="c-url">joinquant.com</div>
+        <p class="c-desc">国内知名度最高的量化平台之一，策略源码与社区讨论存量极大，仍是很好的学习资料库。注意：非中国大陆 IP 自 2026-08 起已停止支持。</p>
+        <div class="c-tags"><span>#国内</span><span>#资料多</span><span>#注意时效</span></div>
+      </a>
+
+      <a class="card" data-cat="cn" data-kw="万矿 windquant 万得 wind 数据 权威 机构 jupyter 算力" href="https://www.windquant.com/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">万矿 WindQuant</span><span class="c-badge">Wind 数据</span></div>
+        <div class="c-url">windquant.com</div>
+        <p class="c-desc">万得旗下在线量化平台，直接用 Wind 终端数据库，数据权威性最高；集成 Jupyter Notebook、云端算力强。前提是你能接触到 Wind 终端（学校或机构）。</p>
+        <div class="c-tags"><span>#国内</span><span>#Wind</span><span>#机构向</span></div>
+      </a>
+
+      <a class="card" data-cat="cn" data-kw="bigquant 人工智能量化 可视化 拖拽 机器学习 因子" href="https://bigquant.com/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">BigQuant</span><span class="c-badge">AI 量化</span></div>
+        <div class="c-url">bigquant.com</div>
+        <p class="c-desc">面向 AI 量化，可视化模块拖拽，内置大量机器学习/深度学习因子。对不想先啃工程的人，是快速见到「因子 → 模型」全流程的入口。</p>
+        <div class="c-tags"><span>#国内</span><span>#AI量化</span><span>#低代码</span></div>
+      </a>
+
+      <a class="card" data-cat="cn" data-kw="qmt 迅投 券商量化终端 实盘 python 开户 资金门槛" href="https://www.thinktrader.net/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">QMT（迅投）</span><span class="c-badge">实盘</span></div>
+        <div class="c-url">券商量化终端 · 需开户</div>
+        <p class="c-desc">券商端的实盘量化终端，软件与数据免费，但需在支持券商开户并满足资金门槛（传统 30–50 万，部分渠道已降至 10 万甚至更低）。Mini 模式可用本地 IDE 调交易接口。实盘的正路。</p>
+        <div class="c-tags"><span>#实盘</span><span>#券商</span><span>#有门槛</span></div>
+      </a>
+
+      <a class="card" data-cat="cn" data-kw="ptrade 恒生 券商量化终端 实盘 python 开户" href="https://www.hs.net/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">Ptrade（恒生）</span><span class="c-badge">实盘</span></div>
+        <div class="c-url">券商量化终端 · 需开户</div>
+        <p class="c-desc">恒生的券商量化终端，与 QMT 同属「券商端」路线，回测系统较完善。选哪家取决于你所在券商的接入情况，二者功能高度重叠。</p>
+        <div class="c-tags"><span>#实盘</span><span>#券商</span><span>#有门槛</span></div>
+      </a>
+
+      <a class="card" data-cat="cn" data-kw="fmz 发明者量化 多标的 期货 crypto 多语言 回测 社区策略" href="https://www.fmz.com/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">FMZ 发明者量化</span><span class="c-badge">多标的</span></div>
+        <div class="c-url">fmz.com</div>
+        <p class="c-desc">架构灵活、支持多语言策略，回测引擎强，社区有大量开源实战策略。在商品期货与加密资产方向积累尤其深。</p>
+        <div class="c-tags"><span>#期货</span><span>#Crypto</span><span>#多语言</span></div>
+      </a>
+
+      <a class="card" data-cat="cn" data-kw="集思录 jisilu 低风险 套利 可转债 etf 分级基金 社区" href="https://www.jisilu.cn/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">集思录</span><span class="c-badge free">免费</span></div>
+        <div class="c-url">jisilu.cn</div>
+        <p class="c-desc">严格说不是量化站，而是低风险投资与套利社区——可转债、ETF 套利、分级基金。但套利思想本身极适合转成可回测的策略，用户水平普遍很高。</p>
+        <div class="c-tags"><span>#套利</span><span>#可转债</span><span>#低风险</span></div>
+      </a>
+
+    </div>
+  </section>
+
+  <section data-sec>
+    <div class="sec-h"><h2>数据源</h2><span>4 项 · 免费、可本地清洗</span></div>
+    <div class="grid">
+
+      <a class="card" data-cat="data" data-kw="akshare 开源 免费 金融数据 接口 python a股 美股 期货 期权 另类数据" href="https://akshare.akfamily.xyz/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">AkShare</span><span class="c-badge free">完全免费</span></div>
+        <div class="c-url">akshare.akfamily.xyz</div>
+        <p class="c-desc">开源 Python 数据接口库，A 股、美股、期货、期权、宏观、另类数据覆盖面极广，无需注册与积分。缺点是数据要自己清洗——但对做工程的人来说这不算缺点。</p>
+        <div class="c-tags"><span>#免费</span><span>#开源</span><span>#全品类</span></div>
+      </a>
+
+      <a class="card" data-cat="data" data-kw="tushare 积分制 财经数据 接口 股票 基金 期货 宏观" href="https://tushare.pro/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">Tushare</span><span class="c-badge">积分制</span></div>
+        <div class="c-url">tushare.pro</div>
+        <p class="c-desc">老牌财经数据接口，几行代码取股票/基金/期货历史数据。采用积分制，学生认证或做社区任务可拿到基础权限，跑日线级别回测足够。</p>
+        <div class="c-tags"><span>#国内</span><span>#日线够用</span><span>#积分制</span></div>
+      </a>
+
+      <a class="card" data-cat="data" data-kw="baostock 免费 开源 证券数据 a股 历史行情 无需注册" href="http://baostock.com/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">Baostock</span><span class="c-badge free">免费</span></div>
+        <div class="c-url">baostock.com</div>
+        <p class="c-desc">免费开源的证券数据接口，无需注册即可获取 A 股历史行情。数据面窄于 AkShare，但胜在稳定、接口简单，适合当第一份数据源。</p>
+        <div class="c-tags"><span>#免费</span><span>#A股</span><span>#无需注册</span></div>
+      </a>
+
+      <a class="card" data-cat="data" data-kw="yfinance yahoo finance 美股 数据 期权 分红 实时" href="https://github.com/ranaroussi/yfinance" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">yfinance</span><span class="c-badge free">免费</span></div>
+        <div class="c-url">github.com/ranaroussi/yfinance</div>
+        <p class="c-desc">Yahoo Finance 的 Python 接口，支持美股行情、期权链、分红与拆股调整。海外量化项目的默认起点，配合 AkShare 可覆盖中外市场。</p>
+        <div class="c-tags"><span>#美股</span><span>#免费</span><span>#海外</span></div>
+      </a>
+
+    </div>
+  </section>
+
+  <section data-sec>
+    <div class="sec-h"><h2>系统课程与学习路径</h2><span>6 项 · 从零到能跑</span></div>
+    <div class="grid">
+
+      <a class="card" data-cat="course" data-kw="quantstart 量化入门 教程 python 回测 系统 构建 风险管理" href="https://www.quantstart.com/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">QuantStart</span><span class="c-badge free">免费</span></div>
+        <div class="c-url">quantstart.com</div>
+        <p class="c-desc">量化入门必读站，从零讲怎么搭 Python 回测系统、做风险管理和算法交易。文章成体系、不啰嗦，是「先跑通一遍全流程」的最佳起点。</p>
+        <div class="c-tags"><span>#入门</span><span>#成体系</span><span>#免费</span></div>
+      </a>
+
+      <a class="card" data-cat="course" data-kw="quantinsti blog 量化交易 知识库 编程 策略 职业转型 免费" href="https://blog.quantinsti.com/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">QuantInsti Blog</span><span class="c-badge free">免费</span></div>
+        <div class="c-url">blog.quantinsti.com</div>
+        <p class="c-desc">覆盖量化交易全产业链的知识库：编程技巧、策略开发、职业路径。国内可直接访问、无需注册登录，文章精品率高，适合当长期订阅源。</p>
+        <div class="c-tags"><span>#免费</span><span>#可直接访问</span><span>#知识库</span></div>
+      </a>
+
+      <a class="card" data-cat="course" data-kw="the python quants tpq yves hilpisch 金融 python 高性能 算法交易" href="https://tpq.io/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">The Python Quants</span><span class="c-badge">课程</span></div>
+        <div class="c-url">tpq.io</div>
+        <p class="c-desc">Yves Hilpisch 的站点，专注金融 Python 的高性能计算与算法交易。他写的《Python for Finance》是这一路线的标准读物。</p>
+        <div class="c-tags"><span>#Python</span><span>#高性能</span><span>#有配套书</span></div>
+      </a>
+
+      <a class="card" data-cat="course" data-kw="cqf certificate quantitative finance 认证 课程 金融工程 系统学习" href="https://www.cqf.com/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">CQF</span><span class="c-badge">认证</span></div>
+        <div class="c-url">cqf.com</div>
+        <p class="c-desc">国际认可度较高的量化金融认证课程，体系完整、偏实务。费用不低，适合已经确定要长期做这行、需要一个成体系框架的人。官网的免费资源清单也值得一读。</p>
+        <div class="c-tags"><span>#认证</span><span>#系统</span><span>#需付费</span></div>
+      </a>
+
+      <a class="card" data-cat="course" data-kw="worldquant university 免费 线上 硕士 量化 课程" href="https://www.wqu.edu/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">WorldQuant University</span><span class="c-badge free">免费</span></div>
+        <div class="c-url">wqu.edu</div>
+        <p class="c-desc">提供免费的线上量化金融硕士项目，课程与作业质量在线。适合想系统补数学与金融工程基础、又不想花学费的人。</p>
+        <div class="c-tags"><span>#免费</span><span>#硕士课程</span><span>#基础补齐</span></div>
+      </a>
+
+      <a class="card" data-cat="course" data-kw="量化金融入门 introduction quantitative finance 学习路径 开源 中文 项目清单" href="https://barca0412.github.io/Introduction-to-Quantitative-Finance/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">量化金融入门（开源）</span><span class="c-badge free">免费</span></div>
+        <div class="c-url">barca0412.github.io/Introduction-to-Quantitative-Finance</div>
+        <p class="c-desc">中文开源入门项目，附一份 63 个项目的资源清单，并给出四阶段学习路径（基础工具 → 多因子框架 → 高级技术 → 生产部署）。拿来当路线图用。</p>
+        <div class="c-tags"><span>#中文</span><span>#路线图</span><span>#开源</span></div>
+      </a>
+
+    </div>
+  </section>
+
+  <section data-sec>
+    <div class="sec-h"><h2>研究与因子博客</h2><span>10 项 · 论文与实证</span></div>
+    <div class="grid">
+
+      <a class="card" data-cat="research" data-kw="ssrn 论文 金融经济学 因子研究 学术 预印本" href="https://www.ssrn.com/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">SSRN</span><span class="c-badge">论文</span></div>
+        <div class="c-url">ssrn.com</div>
+        <p class="c-desc">全球最大的社会科学预印本平台，金融经济学板块是获取最新因子与资产定价研究的核心渠道。策略的上游在这里，不在公众号。</p>
+        <div class="c-tags"><span>#论文</span><span>#因子</span><span>#一手</span></div>
+      </a>
+
+      <a class="card" data-cat="research" data-kw="alpha architect 因子投资 实证 价值 动量 深度数据分析" href="https://alphaarchitect.com/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">Alpha Architect</span><span class="c-badge">因子</span></div>
+        <div class="c-url">alphaarchitect.com</div>
+        <p class="c-desc">专注因子投资与实证金融，用大量数据回测拆解价值、动量、质量因子到底有没有效。文章自带数据与检验，不是观点输出。</p>
+        <div class="c-tags"><span>#因子</span><span>#实证</span><span>#数据驱动</span></div>
+      </a>
+
+      <a class="card" data-cat="research" data-kw="quantpedia 策略百科 学术论文 可执行 策略 汇总" href="https://quantpedia.com/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">QuantPedia</span><span class="c-badge">策略库</span></div>
+        <div class="c-url">quantpedia.com</div>
+        <p class="c-desc">把学术论文提炼成可执行的量化策略，按因子/资产类别分类。找策略灵感时比翻论文快得多，但记得回原文验证。</p>
+        <div class="c-tags"><span>#策略灵感</span><span>#论文提炼</span></div>
+      </a>
+
+      <a class="card" data-cat="research" data-kw="quantocracy 聚合 每日 量化 博文 技术讨论" href="https://quantocracy.com/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">Quantocracy</span><span class="c-badge free">聚合</span></div>
+        <div class="c-url">quantocracy.com</div>
+        <p class="c-desc">量化领域文章聚合器，每日汇总全网优质量化博文与研究。一个订阅源顶几十个博客，适合当日常输入。</p>
+        <div class="c-tags"><span>#聚合</span><span>#每日更新</span></div>
+      </a>
+
+      <a class="card" data-cat="research" data-kw="ernie chan 博客 统计套利 机器学习 交易系统 实战 均值回归" href="https://epchan.blogspot.com/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">Dr. Ernie Chan's Blog</span><span class="c-badge">实战</span></div>
+        <div class="c-url">epchan.blogspot.com</div>
+        <p class="c-desc">量化专家 Ernie Chan 的个人博客，讲统计套利、机器学习与交易系统设计的实战心得。他的《Quantitative Trading》是少见的「真讲怎么落地」的书。</p>
+        <div class="c-tags"><span>#统计套利</span><span>#实战</span><span>#有书</span></div>
+      </a>
+
+      <a class="card" data-cat="research" data-kw="robot wealth 系统化交易 代码实现 实战逻辑 构建程序" href="https://robotwealth.com/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">Robot Wealth</span><span class="c-badge">实战</span></div>
+        <div class="c-url">robotwealth.com</div>
+        <p class="c-desc">教你怎么像机构一样构建系统化交易程序，侧重代码实现和实证逻辑。文章经常直接给可跑的代码，工程味很重。</p>
+        <div class="c-tags"><span>#系统化</span><span>#带代码</span></div>
+      </a>
+
+      <a class="card" data-cat="research" data-kw="factor research 股票因子 深度洞察 可视化 因子历史表现" href="https://www.factorresearch.com/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">Factor Research</span><span class="c-badge">因子</span></div>
+        <div class="c-url">factorresearch.com</div>
+        <p class="c-desc">用大量可视化图表分析股票因子的历史表现，特别擅长拆穿「因子失效」和「因子拥挤」。做因子的人应该定期看。</p>
+        <div class="c-tags"><span>#因子</span><span>#可视化</span></div>
+      </a>
+
+      <a class="card" data-cat="research" data-kw="risk.net 权威 新闻 衍生品 定价 风险管理 监管动态" href="https://www.risk.net/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">Risk.net</span><span class="c-badge">行业</span></div>
+        <div class="c-url">risk.net</div>
+        <p class="c-desc">量化金融行业权威新闻站，深度覆盖衍生品定价、风险管理与监管动态。想了解「机构里实际在做什么」，这里比学术论文更接近现实。</p>
+        <div class="c-tags"><span>#行业</span><span>#风控</span><span>#衍生品</span></div>
+      </a>
+
+      <a class="card" data-cat="research" data-kw="newfound research 趋势跟踪 风险平价 系统化 全球宏观 鲁棒性" href="https://blog.thinknewfound.com/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">Newfound Research</span><span class="c-badge">研究</span></div>
+        <div class="c-url">blog.thinknewfound.com</div>
+        <p class="c-desc">侧重趋势跟踪、风险平价与系统化全球宏观，反复强调交易系统的鲁棒性而非回测漂亮。对「过度拟合」的反思写得尤其好。</p>
+        <div class="c-tags"><span>#趋势跟踪</span><span>#风险平价</span><span>#鲁棒性</span></div>
+      </a>
+
+      <a class="card" data-cat="research" data-kw="damodaran musings on markets 估值 教父 市场风险溢价 估值模型" href="https://aswathdamodaran.blogspot.com/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">Musings on Markets</span><span class="c-badge">估值</span></div>
+        <div class="c-url">aswathdamodaran.blogspot.com</div>
+        <p class="c-desc">「估值教父」Damodaran 的博客，提供详尽的市场风险溢价、行业对比与估值模型拆解，数据全部公开可下载。基本面量化的标配输入。</p>
+        <div class="c-tags"><span>#估值</span><span>#数据公开</span></div>
+      </a>
+
+    </div>
+  </section>
+
+  <section data-sec>
+    <div class="sec-h"><h2>社区与问答</h2><span>6 项 · 遇到卡点去哪问</span></div>
+    <div class="grid">
+
+      <a class="card" data-cat="comm" data-kw="quantnet 社区 mfe 排名 求职 面试 资源" href="https://quantnet.com/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">QuantNet</span><span class="c-badge">社区</span></div>
+        <div class="c-url">quantnet.com</div>
+        <p class="c-desc">全球知名量化金融社区，以 MFE 项目排名、求职经验与面试题库闻名。如果目标是进机构，这里的求职板块信息密度最高。</p>
+        <div class="c-tags"><span>#求职</span><span>#面试</span><span>#MFE</span></div>
+      </a>
+
+      <a class="card" data-cat="comm" data-kw="wilmott paul wilmott 金融工程 论坛 学术 专家 讨论" href="https://forum.wilmott.com/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">Wilmott</span><span class="c-badge">论坛</span></div>
+        <div class="c-url">forum.wilmott.com</div>
+        <p class="c-desc">由 Paul Wilmott 创立的金融工程论坛，聚集大量衍生品定价方向的专家，讨论专业且带学术深度。问定价/随机过程的问题，这里质量最高。</p>
+        <div class="c-tags"><span>#金融工程</span><span>#定价</span><span>#学术</span></div>
+      </a>
+
+      <a class="card" data-cat="comm" data-kw="quantitative finance stack exchange 问答 数学 公式 编程 实现" href="https://quant.stackexchange.com/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">Quant SE</span><span class="c-badge">问答</span></div>
+        <div class="c-url">quant.stackexchange.com</div>
+        <p class="c-desc">量化从业者首选的问答社区，专治复杂数学推导与编程实现的细节问题。搜索历史问题往往比提问更快解决问题。</p>
+        <div class="c-tags"><span>#问答</span><span>#数学</span><span>#实现细节</span></div>
+      </a>
+
+      <a class="card" data-cat="comm" data-kw="reddit r/quant 社区 学术 职业发展 讨论" href="https://www.reddit.com/r/quant/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">r/quant</span><span class="c-badge">社区</span></div>
+        <div class="c-url">reddit.com/r/quant</div>
+        <p class="c-desc">活跃度最高的量化社区之一，从学术讨论到职业发展都有真实见解，也常有从业者聊行业内幕。信息噪声大，但偶尔能捞到真东西。</p>
+        <div class="c-tags"><span>#社区</span><span>#职业</span><span>#英文</span></div>
+      </a>
+
+      <a class="card" data-cat="comm" data-kw="elite trader 交易员 论坛 自动化交易 策略 心理" href="https://www.elitetrader.com/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">Elite Trader</span><span class="c-badge">论坛</span></div>
+        <div class="c-url">elitetrader.com</div>
+        <p class="c-desc">老牌专业交易员论坛，自动化交易板块有大量策略实战与交易心理讨论。偏主观交易者视角，对理解「模型之外的市场」有帮助。</p>
+        <div class="c-tags"><span>#交易心理</span><span>#实战</span></div>
+      </a>
+
+      <a class="card" data-cat="comm" data-kw="雪球 投资者 社区 市场情绪 组合 因子 逻辑" href="https://xueqiu.com/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">雪球</span><span class="c-badge">社区</span></div>
+        <div class="c-url">xueqiu.com</div>
+        <p class="c-desc">国内最大的投资者社区，以主观讨论为主。对量化的人价值在于：感受市场情绪、把大 V 的选股逻辑翻译成可检验的因子假设。</p>
+        <div class="c-tags"><span>#国内</span><span>#市场情绪</span><span>#因子假设</span></div>
+      </a>
+
+    </div>
+  </section>
+
+  <section data-sec>
+    <div class="sec-h"><h2>开源框架与工具库</h2><span>12 项 · 直接读源码、直接改</span></div>
+    <div class="grid">
+
+      <a class="card" data-cat="lib" data-kw="vnpy veighna 国内 开源 实盘 交易 框架 python 期货 期权" href="https://github.com/vnpy/vnpy" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">vn.py (VeighNa)</span><span class="c-badge free">开源</span></div>
+        <div class="c-url">github.com/vnpy/vnpy</div>
+        <p class="c-desc">国内最活跃的开源量化交易框架，覆盖期货、期权、股票、数字货币，已在多家金融机构使用。想读懂国内实盘系统的工程结构，从它入手。</p>
+        <div class="c-tags"><span>#开源</span><span>#实盘</span><span>#国内生态</span></div>
+      </a>
+
+      <a class="card" data-cat="lib" data-kw="qlib microsoft 微软 ai 量化 平台 机器学习 强化学习 自动因子挖掘" href="https://github.com/microsoft/qlib" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">Qlib（微软）</span><span class="c-badge free">开源</span></div>
+        <div class="c-url">github.com/microsoft/qlib</div>
+        <p class="c-desc">AI 导向的量化投资平台，支持多种机器学习范式、市场动态建模、强化学习与自动因子挖掘（配套 RD-Agent）。工程规范，是 AI 量化最好的起点。</p>
+        <div class="c-tags"><span>#AI量化</span><span>#微软</span><span>#工程规范</span></div>
+      </a>
+
+      <a class="card" data-cat="lib" data-kw="vectorbt 向量化 回测 极速 numpy numba 参数优化" href="https://github.com/polakowo/vectorbt" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">vectorbt</span><span class="c-badge free">开源</span></div>
+        <div class="c-url">github.com/polakowo/vectorbt</div>
+        <p class="c-desc">基于 NumPy + Numba 的向量化回测库，支持超大规模参数网格搜索。做参数敏感性分析时比事件驱动框架快几个数量级。</p>
+        <div class="c-tags"><span>#向量化</span><span>#参数优化</span><span>#高性能</span></div>
+      </a>
+
+      <a class="card" data-cat="lib" data-kw="backtesting.py 轻量 回测 库 简洁 优化器 结果分析" href="https://github.com/kernc/backtesting.py" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">backtesting.py</span><span class="c-badge free">开源</span></div>
+        <div class="c-url">github.com/kernc/backtesting.py</div>
+        <p class="c-desc">轻量回测库，代码极简、内置优化器和详细结果分析。适合第一个策略——不学框架概念，先跑出结果建立直觉。</p>
+        <div class="c-tags"><span>#轻量</span><span>#上手快</span></div>
+      </a>
+
+      <a class="card" data-cat="lib" data-kw="zipline reloaded 事件驱动 回测 框架 quantopian 维护版" href="https://github.com/stefan-jansen/zipline-reloaded" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">zipline-reloaded</span><span class="c-badge free">开源</span></div>
+        <div class="c-url">github.com/stefan-jansen/zipline-reloaded</div>
+        <p class="c-desc">Quantopian 事件驱动回测框架的社区维护版，与 Pandas 深度集成、支持多市场。想研究事件驱动回测引擎内部结构，源码质量不错。</p>
+        <div class="c-tags"><span>#事件驱动</span><span>#可读源码</span></div>
+      </a>
+
+      <a class="card" data-cat="lib" data-kw="finrl 强化学习 交易 开源 框架 drl 多市场" href="https://github.com/AI4Finance-Foundation/FinRL" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">FinRL</span><span class="c-badge free">开源</span></div>
+        <div class="c-url">github.com/AI4Finance-Foundation/FinRL</div>
+        <p class="c-desc">第一个开源的金融强化学习框架，生态完整，支持多市场与多种 DRL 算法。想试强化学习做交易，从这里进比从论文进快。</p>
+        <div class="c-tags"><span>#强化学习</span><span>#生态完整</span></div>
+      </a>
+
+      <a class="card" data-cat="lib" data-kw="quantconnect lean 引擎 开源 c# python 云端 回测 实盘" href="https://www.quantconnect.com/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">QuantConnect / LEAN</span><span class="c-badge free">引擎开源</span></div>
+        <div class="c-url">quantconnect.com · LEAN 引擎开源</div>
+        <p class="c-desc">云端回测平台，核心 LEAN 引擎完全开源，支持 C# 与 Python、多资产与跨市场。C# 是 .NET 系，对 C++ 出身的人读起来不隔。可直接研究引擎的事件驱动架构。</p>
+        <div class="c-tags"><span>#C#</span><span>#引擎开源</span><span>#多资产</span></div>
+      </a>
+
+      <a class="card" data-cat="lib" data-kw="riskfolio lib 组合优化 风险度量 cvar 风险平价 最大回撤" href="https://github.com/dcajasn/Riskfolio-Lib" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">Riskfolio-Lib</span><span class="c-badge free">开源</span></div>
+        <div class="c-url">github.com/dcajasn/Riskfolio-Lib</div>
+        <p class="c-desc">专业组合优化库，内置 24 种风险度量（CVaR、最大回撤等）、均值-风险优化与风险平价。做仓位与组合层的事，不用自己推公式。</p>
+        <div class="c-tags"><span>#组合优化</span><span>#风控</span></div>
+      </a>
+
+      <a class="card" data-cat="lib" data-kw="pyportfolioopt 组合优化 有效前沿 black litterman" href="https://pyportfolioopt.readthedocs.io/" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">PyPortfolioOpt</span><span class="c-badge free">开源</span></div>
+        <div class="c-url">pyportfolioopt.readthedocs.io</div>
+        <p class="c-desc">组合优化的经典实现：有效前沿、Black-Litterman、协方差收缩估计。文档写得像教材，适合边读理论边对照实现。</p>
+        <div class="c-tags"><span>#组合优化</span><span>#文档好</span></div>
+      </a>
+
+      <a class="card" data-cat="lib" data-kw="awesome quant 资源 大全 开源 量化 库 工具 数据源" href="https://github.com/wilsonfreitas/awesome-quant" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">awesome-quant</span><span class="c-badge free">清单</span></div>
+        <div class="c-url">github.com/wilsonfreitas/awesome-quant</div>
+        <p class="c-desc">量化资源的百科全书式清单，按语言（含 C++ 板块）整理全球开源量化库、工具与数据源。查「有没有现成轮子」先翻它。</p>
+        <div class="c-tags"><span>#清单</span><span>#含C++板块</span></div>
+      </a>
+
+      <a class="card" data-cat="lib" data-kw="awesome quant ai 机器学习 资源 精选 论文 社区" href="https://github.com/leoncuhk/awesome-quant-ai" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">awesome-quant-ai</span><span class="c-badge free">清单</span></div>
+        <div class="c-url">github.com/leoncuhk/awesome-quant-ai</div>
+        <p class="c-desc">量化投资中 AI/ML 方向的资源精选：策略、平台工具、学习资料、研究论文与社区。偏学术与前沿，和 awesome-quant 互补。</p>
+        <div class="c-tags"><span>#清单</span><span>#AI</span><span>#论文</span></div>
+      </a>
+
+      <a class="card" data-cat="lib" data-kw="freqtrade 开源 加密 货币 交易 机器人 回测 策略优化" href="https://github.com/freqtrade/freqtrade" target="_blank" rel="noopener">
+        <div class="c-top"><span class="c-name">freqtrade</span><span class="c-badge free">开源</span></div>
+        <div class="c-url">github.com/freqtrade/freqtrade</div>
+        <p class="c-desc">免费开源的加密资产交易机器人，支持多交易所、回测、策略优化与 WebUI 控制。如果想先在一个 7×24、无涨跌停的市场里练手，这是最省事的入口。</p>
+        <div class="c-tags"><span>#Crypto</span><span>#7x24</span><span>#练手</span></div>
+      </a>
+
+    </div>
+  </section>
+
+  <div class="empty" id="empty">没有匹配的结果，换个关键词试试。</div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>整理时间：2026-09-24 ｜ 共 55 个条目，均已人工核对域名可访问性。</p>
+    <p>说明：聚宽停止支持非中国大陆 IP、以及各平台免费额度收紧，均来自 2026 年公开报道与社区讨论，属非一手来源，使用前请以各平台官方公告为准。</p>
+    <p>本页仅为学习资源索引，不含任何投资建议。</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var q = document.getElementById('q');
+  var cards = [].slice.call(document.querySelectorAll('.card'));
+  var chips = [].slice.call(document.querySelectorAll('.chip'));
+  var secs = [].slice.call(document.querySelectorAll('section[data-sec]'));
+  var empty = document.getElementById('empty');
+  var active = 'all';
+
+  function apply(){
+    var kw = (q.value || '').trim().toLowerCase();
+    var shown = 0;
+    cards.forEach(function(c){
+      var text = (c.getAttribute('data-kw') || '') + ' ' + c.textContent.toLowerCase();
+      var cat = c.getAttribute('data-cat') || '';
+      var okKw = !kw || text.indexOf(kw) > -1;
+      var okCat = active === 'all' || cat === active;
+      var show = okKw && okCat;
+      c.style.display = show ? '' : 'none';
+      if (show) { shown++; }
+    });
+    secs.forEach(function(s){
+      var any = s.querySelectorAll('.card:not([style*="display: none"])').length > 0;
+      s.style.display = any ? '' : 'none';
+    });
+    empty.style.display = shown ? 'none' : 'block';
+  }
+
+  q.addEventListener('input', apply);
+  chips.forEach(function(ch){
+    ch.addEventListener('click', function(){
+      chips.forEach(function(x){ x.classList.remove('on'); });
+      ch.classList.add('on');
+      active = ch.getAttribute('data-cat');
+      apply();
+    });
+  });
+  apply();
+})();
+</script>
+
+</body>
+</html>
